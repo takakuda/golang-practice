@@ -6,12 +6,18 @@ func main() {
 	n := 0
 	for {
 		n++
-		if n > 10 {
-			break //ループを抜ける
+		if n > 15 {
+			break
 		}
-		if n%2 == 0 {
-			continue // 偶数なら次の繰り返しへ
+		switch n {
+		case 15:
+			fmt.Println("FizzBuzz")
+		case 5, 10:
+			fmt.Println("Buzz")
+		case 3, 6, 9, 12:
+			fmt.Println("Fizz")
+		default:
+			fmt.Println(n)
 		}
-		fmt.Println(n) //奇数のみ表示
 	}
 }
