@@ -3,6 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	const message string = "bye"
-	fmt.Printf(message)
+	var i int
+	fmt.Println(i)
 }
