@@ -2,12 +2,11 @@ package main
 
 import "fmt"
 
-func swap(i, j int) (int, int) {
-	return j, i
-}
-
 func main() {
-	x, y := 3, 4
-	x, _ = swap(x, y)
-	fmt.Println(x)
+	file, err := os.Open("hello.go")
+	if err != nil {
+		// エラー処置
+		// returnなどで処理を別の場所に抜ける
+	}
+	// fileを用いた処理
 }
