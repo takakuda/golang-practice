@@ -6,12 +6,13 @@ import (
 	"log"
 )
 
-func div(i, j int) (int, error) {
+func div(i, j int) (result int, err error) {
 	if j == 0 {
-		// 自作のエラーを返す
-		return 0, errors.New("divied by zero")
+		err = error.New("devied by zero")
+		return // return 0, errと同じ
 	}
-	return i / j, nil
+	result = i / j
+	return
 }
 
 func main() {
