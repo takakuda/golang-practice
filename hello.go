@@ -2,11 +2,12 @@ package main
 
 import "fmt"
 
-func sum(i, j int) int {
-	return i + j
+func swap(i, j int) (int, int) {
+	return j, i
 }
 
 func main() {
-	n := sum(1, 2)
-	fmt.Println(n)
+	x, y := 3, 4
+	x, _ = swap(x, y)
+	fmt.Println(x)
 }
