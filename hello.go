@@ -3,7 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+	n := 0
+	for {
+		n++
+		if n > 10 {
+			break //ループを抜ける
+		}
+		if n%2 == 0 {
+			continue // 偶数なら次の繰り返しへ
+		}
+		fmt.Println(n) //奇数のみ表示
 	}
 }
