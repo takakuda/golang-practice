@@ -8,7 +8,7 @@ import (
 
 func div(i, j int) (result int, err error) {
 	if j == 0 {
-		err = error.New("devied by zero")
+		err = errors.New("devied by zero")
 		return // return 0, errと同じ
 	}
 	result = i / j
