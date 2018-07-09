@@ -4,10 +4,10 @@ import (
 	"fmt"
 )
 
-var sum func(i, j int) = func(i, j int) {
-	fmt.Println(i + j)
-}
+var arr [4]string
 
-func main() {
-	sum(2, 4)
-}
+arr[0] = "a"
+arr[1] = "b"
+arr[2] = "c"
+arr[3] = "d"
+
