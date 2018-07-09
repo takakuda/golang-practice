@@ -4,8 +4,10 @@ import (
 	"fmt"
 )
 
+var sum func(i, j int) = func(i, j int) {
+	fmt.Println(i + j)
+}
+
 func main() {
-	func(i, j int) {
-		fmt.Println(i + j)
-	}(2, 4)
+	sum(2, 4)
 }
