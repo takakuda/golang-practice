@@ -3,14 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	var arr [4]string
-
-	arr[0] = "a"
-	arr[1] = "b"
-	arr[2] = "c"
-	arr[3] = "d"
-
-	for i, s := range arr {
-		fmt.Println(i, s)
-	}
+	s := []int{0, 1, 2, 3, 4, 5}
+	fmt.Println(s[2:4])
 }
