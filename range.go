@@ -2,7 +2,13 @@ package main
 
 import "fmt"
 
+func sum(nums ...int) (result int) {
+	for _, n := range nums {
+		result += n
+	}
+	return
+}
+
 func main() {
-	s := []int{0, 1, 2, 3, 4, 5}
-	fmt.Println(s[2:4])
+	fmt.Println(sum(1, 2, 3, 4))
 }
