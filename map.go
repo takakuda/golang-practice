@@ -9,5 +9,8 @@ func main() {
 		1: "january",
 		2: "February",
 	}
-	fmt.Println(month)
+	_, ok := month[1]
+	if ok {
+		fmt.Println(month)
+	}
 }
