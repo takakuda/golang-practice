@@ -4,13 +4,10 @@ import (
 	"fmt"
 )
 
-func fn(arr [4]string) {
-	arr[0] = "x"
-	fmt.Println(arr)
-}
-
 func main() {
-	arr := [4]string{"a", "b", "c", "d"}
-	fn(arr)
-	fmt.Println(arr)
+	var s []string
+	s = append(s, "a")
+	s = append(s, "b")
+	s = append(s, "c", "d")
+	fmt.Println(s)
 }
