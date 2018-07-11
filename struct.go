@@ -9,9 +9,7 @@ type Task struct {
 }
 
 func main() {
-	var task Task = Task{
-		1, "buy the milk", true,
-	}
+	var task Task = Task{}
 	fmt.Println(task.ID)
 	fmt.Println(task.Detail)
 	fmt.Println(task.done)
