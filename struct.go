@@ -8,12 +8,9 @@ type Task struct {
 	done   bool
 }
 
-func Finish(task *Task) {
-	task.done = true
-}
-
 func main() {
-	task := &Task{done: false}
-	Finish(task)
+	var task *Task = new(Task)
+	task.ID = 1
+	task.Detail = "buy the milk"
 	fmt.Println(task.done)
 }
