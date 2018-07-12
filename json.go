@@ -7,11 +7,11 @@ import (
 )
 
 type Person struct {
-	ID      int
-	Name    string
-	Email   string
-	Age     int
-	Address string
+	ID      int    `json:"id"`
+	Name    string `json:"name"`
+	Email   string `json:"-"`
+	Age     int    `json:"age"`
+	Address string `json:"address,omitempty"`
 	memo    string
 }
 
