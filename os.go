@@ -1,30 +1,30 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 )
 
-type Writer interface {
-	Write(p []byte) (n int, err error)
-}
-
 func main() {
-	// ファイルを生成
-	file, err := os.Create("./file.txt")
+	// ファイルを開く
+	file, err := os.Open("./file.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// プログラムが終わったらファイルを閉じる
+	// プログラムが終了したらファイルを閉じる
 	defer file.Close()
 
-	// 書き込むデータを[]byteで用意する
-	message := []byte("hello world\n")
+	// 12byte格納可能なスライスを用意する
+	message := make([]byte, 12)
 
-	// Writeを用いて書き込む
-	_, err = file.Write(message)
+	// ファイル内のデータをスライスに読み出す
+	_, err = file.Read(message)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// 文字列にして表示
+	fmt.Print(string(message))
 }
