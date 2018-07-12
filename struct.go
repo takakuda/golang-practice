@@ -8,9 +8,12 @@ type Task struct {
 	done   bool
 }
 
+func Finish(task Task) {
+	task.done = true
+}
+
 func main() {
-	var task Task = Task{}
-	fmt.Println(task.ID)
-	fmt.Println(task.Detail)
+	task := Task{done: false}
+	Finish(task)
 	fmt.Println(task.done)
 }
