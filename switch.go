@@ -2,12 +2,18 @@ package main
 
 import "fmt"
 
+type Stringer interface {
+	String() string
+}
+
 func Print(value interface{}) {
-	s, ok := value.(string)
-	if ok {
-		fmt.Printf("value is string: %s\n", s)
-	} else {
-		fmt.Printf("value is not string\n")
+	switch v := value.(type) {
+	case string:
+		fmt.Printf("value is string: %s\n", v)
+	case int:
+		fmt.Printf("value is int:%d\n", v)
+	case Stringer:
+		fmt.Printf("value is Stringer:%s\n", v)
 	}
 }
 
