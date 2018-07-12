@@ -8,9 +8,12 @@ type Task struct {
 	done   bool
 }
 
+func (task Task) String() string {
+	str := fmt.Sprintf("%d) %s", task.ID, task.Detail)
+	return str
+}
+
 func main() {
-	var task *Task = new(Task)
-	task.ID = 1
-	task.Detail = "buy the milk"
-	fmt.Println(task.done)
+	task := New.Task(1, "buy the milk")
+	fmt.Printf("#s", task)
 }
