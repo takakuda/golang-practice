@@ -1,30 +1,33 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 )
 
 func main() {
+	person := &Person{
+		ID:     1,
+		Name:   "Gopher",
+		Email:  "gopher@example.org",
+		Age:    5,
+		Adress: "",
+		memo:   "golang lover",
+	}
+
 	// ファイルを開く
-	file, err := os.Open("./file.txt")
+	file, err := os.Create("./person.json")
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	// プログラムが終了したらファイルを閉じる
 	defer file.Close()
 
-	// 12byte格納可能なスライスを用意する
-	message := make([]byte, 12)
+	// エンコーダの取得
+	encoder := json.NewEncoder(file)
 
-	// ファイル内のデータをスライスに読み出す
-	_, err = file.Read(message)
+	// jsonエンコーダーしたデータの書き込み
+	err = encoder.Encode(person)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	// 文字列にして表示
-	fmt.Print(string(message))
 }
