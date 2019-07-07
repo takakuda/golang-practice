@@ -12,3 +12,12 @@ func TestAppName(t *testing.T) {
     t.Errorf("%s != %s", expect, actual)
   }
 }
+
+// this is comment
+
+/*
+  複数行の
+  コメントは
+  このように書ける
+*/
+
