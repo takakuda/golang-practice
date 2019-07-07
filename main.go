@@ -2,14 +2,9 @@ package main
 
 import (
   "fmt"
+  "math"
 )
 
-var n = 100
-
 func main() {
-  n = n + 1
-  fmt.Printf("n=%d\n", n)
-  a := 1
-  b := uint(a)
-  fmt.Printf("n=%d\n", b)
+  fmt.Printf("unit32 max value = %d\n", math.MaxUint32)
 }
