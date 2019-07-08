@@ -5,11 +5,10 @@ import (
 )
 
 func main() {
-  s := `
-  GO
-  複数行の
-  文字列
-  `
+  a := plus(1, 2)
+  fmt.Printf("%v", a)
+}
 
-  fmt.Printf("%v", s)
+func plus(x, y int) int {
+  return x + y
 }
