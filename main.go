@@ -5,6 +5,11 @@ import (
 )
 
 func main() {
-  r := '松'
-  fmt.Printf("%v", r)
+  s := `
+  GO
+  複数行の
+  文字列
+  `
+
+  fmt.Printf("%v", s)
 }
