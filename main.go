@@ -4,21 +4,14 @@ import (
   "fmt"
 )
 
-func integers() func() int {
-  i := 0
-  return func() int {
-    i += 1
-    return i
-  }
+const ONE = 1
+
+func one() (int, int) {
+  const TWO = 2
+  return ONE, TWO
 }
 
 func main() {
-  ints := integers()
-
-  fmt.Println(ints())
-  fmt.Println(ints())
-  fmt.Println(ints())
-
-  otherInts := integers()
-  fmt.Println(otherInts())
+  x, y := one()
+  fmt.Printf("x=%d, y=%d\n", x, y)
 }
