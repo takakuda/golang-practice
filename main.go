@@ -5,12 +5,8 @@ import (
 )
 
 func main() {
-  for i := 0; i < 100; i++ {
-    if (i % 2 == 1) {
-      continue
-    }
-    fmt.Println(i)
-    i++
+  fruits := [3]string{ "Apple", "Banana", "Cherry"}
+  for i, s := range fruits {
+    fmt.Printf("fruits[%d]=%s\n", i, s)
   }
-  fmt.Println(16 % 2 == 1)
 }
