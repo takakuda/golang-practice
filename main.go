@@ -4,12 +4,13 @@ import (
   "fmt"
 )
 
-func plus(x, y int) int {
-  return x + y
+func returnFunc() func() {
+  return func() {
+    fmt.Println("I'm a function")
+  }
 }
 
-var plusAlias = plus
-
 func main() {
-  fmt.Println(plusAlias(10, 5))
+  f := returnFunc()
+  f()
 }
