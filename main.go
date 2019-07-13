@@ -5,6 +5,11 @@ import (
 )
 
 func main() {
-  panic("runtime error!")
+  defer func() {
+    if x := recover(); x != nil {
+      fmt.Println(x)
+    }
+  }()
+  panic("panic!")
   fmt.Println("Hello, world!")
 }
