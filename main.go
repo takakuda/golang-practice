@@ -5,13 +5,9 @@ import (
 )
 
 func main() {
-  var x interface{} = 1
-  switch x.(type) {
-  case bool:
-    fmt.Println("bool")
-  case int, uint:
-    fmt.Println("integer or unsigned integer")
-  default:
-    fmt.Println("don`t know")
-  }
+  fmt.Println("A")
+  goto L
+  fmt.Println("B")
+L:
+  fmt.Println("C")
 }
