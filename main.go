@@ -5,9 +5,16 @@ import (
 )
 
 func main() {
-  fmt.Println("A")
-  goto L
-  fmt.Println("B")
-L:
-  fmt.Println("C")
+LOOP:
+  for {
+    for {
+      for {
+        fmt.Println("開始")
+        break LOOP
+      }
+      fmt.Println("通らない")
+    }
+    fmt.Println("通らない")
+  }
+  fmt.Println("完了")
 }
