@@ -4,19 +4,21 @@ import (
   "fmt"
 )
 
-func later() func(string) string {
-  var store string
-  return func(next string) string {
-    s := store
-    store = next
-    return s
+func integers() func() int {
+  i := 0
+  return func() int {
+    i += 1
+    return i
   }
 }
 
 func main() {
-  f := later()
+  ints := integers()
 
-  fmt.Println(f("Golsng"))
-  fmt.Println(f("is"))
-  fmt.Println(f("awesome!"))
+  fmt.Println(ints())
+  fmt.Println(ints())
+  fmt.Println(ints())
+
+  otherInts := integers()
+  fmt.Println(otherInts())
 }
