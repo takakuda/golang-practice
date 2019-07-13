@@ -5,7 +5,10 @@ import (
 )
 
 func main() {
-  if x, y := 1, 2; x < y {
-    fmt.Printf("x(%d) is less than y(%d)\n", x, y)
+  x, y := 3, 5
+  if n := x * y; n%2 == 0 {
+    fmt.Printf("n(%d) is even\n", n)
+  } else {
+    fmt.Printf("n(%d) is odd\n", n)
   }
 }
