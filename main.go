@@ -1,17 +1,11 @@
 package main
 
 import (
-  "fmt"
+  "foo"
 )
 
-const ONE = 1
+foo.MAX
+foo.inter_const
 
-func one() (int, int) {
-  const TWO = 2
-  return ONE, TWO
-}
-
-func main() {
-  x, y := one()
-  fmt.Printf("x=%d, y=%d\n", x, y)
-}
+foo.FooFunc(5)
+foo.internalFunc(5)
