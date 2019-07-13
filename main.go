@@ -5,16 +5,10 @@ import (
 )
 
 func main() {
-LOOP:
-  for {
-    for {
-      for {
-        fmt.Println("開始")
-        break LOOP
-      }
-      fmt.Println("通らない")
-    }
-    fmt.Println("通らない")
-  }
-  fmt.Println("完了")
+  runDefer()
+}
+
+func runDefer() {
+  defer fmt.Println("defer")
+  fmt.Println("done")
 }
