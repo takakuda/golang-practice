@@ -4,13 +4,12 @@ import (
   "fmt"
 )
 
-func returnFunc() func() {
-  return func() {
-    fmt.Println("I'm a function")
-  }
+func callFunction(f func()) {
+  f()
 }
 
 func main() {
-  f := returnFunc()
-  f()
+  callFunction(func() {
+    fmt.Println("I`m a fucntion")
+  })
 }
