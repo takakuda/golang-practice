@@ -6,11 +6,8 @@ import (
 
 func main() {
   i := 0
-  for {
+  for i < 100 {
     fmt.Println(i)
     i++
-    if i == 100 {
-      break
-    }
   }
 }
