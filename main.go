@@ -6,13 +6,12 @@ import (
 
 func main() {
   var x interface{} = 1
-  if x == nil {
-    fmt.Println("x is nil")
-  } else if i, isInt := x.(int); isInt {
-    fmt.Println("x is integer : %d\n", i)
-  } else if s, isString := x.(string); isString {
-    fmt.Println(s)
-  } else {
-    fmt.Println("unsupported type!")
+  switch x.(type) {
+  case bool:
+    fmt.Println("bool")
+  case int, uint:
+    fmt.Println("integer or unsigned integer")
+  default:
+    fmt.Println("don`t know")
   }
 }
