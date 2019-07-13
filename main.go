@@ -4,12 +4,19 @@ import (
   "fmt"
 )
 
-func callFunction(f func()) {
-  f()
+func later() func(string) string {
+  var store string
+  return func(next string) string {
+    s := store
+    store = next
+    return s
+  }
 }
 
 func main() {
-  callFunction(func() {
-    fmt.Println("I`m a fucntion")
-  })
+  f := later()
+
+  fmt.Println(f("Golsng"))
+  fmt.Println(f("is"))
+  fmt.Println(f("awesome!"))
 }
