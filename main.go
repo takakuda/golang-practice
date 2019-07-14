@@ -4,10 +4,20 @@ import (
   "fmt"
 )
 
+var S = ""
+
 func init() {
-  fmt.Println("init()")
+  S = S + "A"
+}
+
+func init() {
+  S = S + "B"
+}
+
+func init() {
+  S = S + "C"
 }
 
 func main() {
-  fmt.Println("main()")
+  fmt.Println(S)
 }
