@@ -4,12 +4,15 @@ import (
   "fmt"
 )
 
+func sub() {
+  for {
+    fmt.Println("sub loop")
+  }
+}
+
 func main() {
-  defer func() {
-    if x := recover(); x != nil {
-      fmt.Println(x)
-    }
-  }()
-  panic("panic!")
-  fmt.Println("Hello, world!")
+  go sub()
+  for {
+    fmt.Println("main loop")
+  }
 }
