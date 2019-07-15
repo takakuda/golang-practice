@@ -4,14 +4,15 @@ import (
   "fmt"
 )
 
-func sum(s ...int) int {
-  n := 0
-  for _, v := range s {
-    n += v
+func pow(a []int) {
+  for i, v := range a {
+    a[i] = v * v
   }
-  return n
+  return
 }
 
 func main() {
-  fmt.Println(sum(1, 2, 3))
+  a := []int{1, 2, 3}
+  pow(a)
+  fmt.Println(a)
 }
