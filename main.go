@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
-  s := make([]int, 10)
-  fmt.Println(len(s))
+  a := [5]int{1, 2, 3, 4, 5}
+  s := a[0:2]
+  fmt.Println(s)
 }
