@@ -6,5 +6,5 @@ import (
 
 func main() {
   s := make([]int, 10)
-  fmt.Println(s)
+  fmt.Println(len(s))
 }
