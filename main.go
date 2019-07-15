@@ -5,9 +5,18 @@ import (
 )
 
 func main() {
-  s := []int{1, 2, 3}
-  s = append(s, 4)
-  fmt.Println(s)
-  s = append(s, 5, 6, 7)
-  fmt.Println(s)
+  s := make([]int, 0, 0)
+  fmt.Printf("(A) len=%d, cap=%d\n", len(s), cap(s))
+
+  s = append(s, 1)
+  fmt.Printf("(B) len=%d, cap=%d\n", len(s), cap(s))
+
+  s = append(s, []int{1, 2, 3, 4}...)
+  fmt.Printf("(C) len=%d, cap=%d\n", len(s), cap(s))
+
+  s = append(s, 5)
+  fmt.Printf("(D) len=%d, cap=%d\n", len(s), cap(s))
+
+  s = append(s, 6, 7, 8, 9)
+  fmt.Printf("(E) len=%d, cap=%d\n", len(s), cap(s))
 }
