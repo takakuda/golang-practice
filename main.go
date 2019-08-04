@@ -5,7 +5,9 @@ import (
 )
 
 func main() {
-	m := make(map[int]string)
-	m[1] = "US"
+	m := map[int]string{
+		1: "taro",
+		2: "jiro",
+	}
 	fmt.Println(m)
 }
