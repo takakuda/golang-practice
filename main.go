@@ -5,14 +5,8 @@ import (
 )
 
 func main() {
-	ch := make(chan int, 3)
-	ch <- 1
-	ch <- 2
-	ch <- 3
+	ch := make(chan int)
 	close(ch)
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
+	i, ok := <-ch
+	fmt.Println(i, ok)
 }
