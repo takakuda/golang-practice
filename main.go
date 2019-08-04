@@ -5,12 +5,6 @@ import (
 )
 
 func main() {
-	m := map[int]string{
-		1: "Apple",
-		2: "Banana",
-		3: "Cherry",
-	}
-	for k, v := range m {
-		fmt.Printf("%d -> %s\n", k, v)
-	}
+	m := map[int]string{1: "A", 2: "B", 3: "C"}
+	fmt.Println(len(m))
 }
