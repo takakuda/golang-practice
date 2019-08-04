@@ -6,8 +6,11 @@ import (
 
 func main() {
 	m := map[int]string{
-		1: "taro",
-		2: "jiro",
+		1: "Apple",
+		2: "Banana",
+		3: "Cherry",
 	}
-	fmt.Println(m)
+	for k, v := range m {
+		fmt.Printf("%d -> %s\n", k, v)
+	}
 }
