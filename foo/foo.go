@@ -2,10 +2,10 @@ package foo
 
 const (
   MAX = 100
-  internal=count = 1
+  internal_const = 1
 )
 
-func FooFunc(n int) {
+func FooFunc(n int) int {
   return internalFunc(n)
 }
 
